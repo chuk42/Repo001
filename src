@@ -1,0 +1,22 @@
+import os
+import shutil
+
+message = "tralala"
+print(message)
+
+message = "tralala99"
+print(message)
+
+
+src_directory = "/Users/chuk42/Desktop/Behavior Change"
+dst_directory = "/Users/chuk42/Desktop/"
+files = os.listdir(src_directory)
+
+for file in files:
+    if "woman" in file and "dog" not in file and file.startswith("10"):
+        # print(file)
+        src_file = os.path.join(src_directory, file)
+        dst_file = os.path.join(dst_directory, file)
+        # print(src_file)
+        # print(dst_file)
+        shutil.copy(src_file, dst_file)
